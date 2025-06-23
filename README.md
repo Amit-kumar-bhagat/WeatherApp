@@ -1,12 +1,69 @@
-# React + Vite
+# 🌦️ Weather App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple weather application built using **React**, **Vite**, **Tailwind CSS**, and **OpenWeather API**.  
+It allows users to search any city and view real-time weather details like temperature, wind speed, and more.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Tech Stack
 
-## Expanding the ESLint configuration
+- ⚛️ React (Vite)
+- 🎨 Tailwind CSS
+- 🌐 OpenWeatherMap API
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 📸 Features
+
+- Real-time weather by city name
+- Temperature, min/max, feels like, wind speed
+- Clean and responsive UI
+- Uses `.env` to hide API key
+
+---
+
+## 🛠️ Getting Started
+
+### 1. Clone the repo
+
+```bash
+git clone https://github.com/your-username/weather-app.git
+cd weather-app
+
+# Install dependencies
+
+npm Install
+
+# Setup Environment Variable
+
+VITE_WEATHER_API_KEY=your_api_key_here
+
+#Start the development server
+npm run dev
+
+🌍 API Used
+OpenWeatherMap
+(Free tier allows real-time weather data by city name)
+
+
+📁 Folder Structure
+src/
+├── Components/
+│   ├── WeatherBox.jsx
+│   └── WeatherCard.jsx
+├── App.jsx
+├── main.jsx
+├── index.css
+.env
+
+
+# Deployment
+You can deploy this app for free using:
+- Vercel
+- Netlify
+
+👨‍💻 Author
+Amit Kumar Bhagat
+Feel free to explore, fork, or contribute ✨
+
+
