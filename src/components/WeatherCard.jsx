@@ -1,6 +1,5 @@
 import React from "react";
 const WeatherCard = ({data}) => {
- // Agar data proper nahi hai to component blank dikhao
   if (!data || !data.main || !data.weather) return null;
 
 
