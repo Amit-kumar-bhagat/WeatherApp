@@ -11,13 +11,13 @@ const [error, setError] = useState("");
 
 const fetchWeather = async() =>{
 
-if (city===""){
+if (city.trim()===""){
   alert("Please Enter City name");
   return;
 };
 
 const apiKey = import.meta.env.VITE_WEATHER_API_KEY;
-const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+const url = `https://api.openweathermap.org/data/2.5/weather?q=${encodeURIComponent(city)}&appid=${apiKey}&units=metric`;
 
 try {
 
