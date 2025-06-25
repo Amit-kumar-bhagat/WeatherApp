@@ -1,6 +1,34 @@
 import React from "react";
+import { useState } from "react";
+
 const WeatherCard = ({data}) => {
+
+
+  
+
+
+  const temperature =data.main.temp;
+
+
+let tempcolor= "text-green-800";
+
+if(temperature>=38){
+  tempcolor = "text-red-500";
+} else if(temperature>28) {
+
+  tempcolor = "text-yellow-500";
+
+  
+
+
+
+
+  
+}
+
   if (!data || !data.main || !data.weather) return null;
+
+  
 
 
   return (
@@ -15,7 +43,7 @@ const WeatherCard = ({data}) => {
     
     <div className="flex justify-between">
       <span className="text-gray-600">Temperature:</span>
-      <span className="font-medium">{data.main.temp}°C</span>
+      <span className={`font-medium text ${tempcolor}` }>{temperature}°C</span>
     </div>
     
     <div className="flex justify-between">
