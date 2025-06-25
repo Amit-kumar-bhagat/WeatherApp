@@ -59,8 +59,15 @@ return(
       type="text"
       placeholder="E.g. Delhi"
       onChange={(e) => setCity(e.target.value)}
+      onKeyDown={(e) => {
+        if (e.key==="Enter"){
+          fetchWeather()
+        }
+      }}
+      
       className="p-3 rounded-lg w-full bg-gray-50 text-gray-800 placeholder-gray-400 outline-none border border-gray-200 focus:border-blue-400 focus:ring-1 focus:ring-blue-200 transition-all"
     />
+   
 
     <button 
       onClick={fetchWeather} 

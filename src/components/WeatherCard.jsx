@@ -12,9 +12,9 @@ const WeatherCard = ({data}) => {
 
 let tempcolor= "text-green-800";
 
-if(temperature>=38){
+if(temperature>=28){
   tempcolor = "text-red-500";
-} else if(temperature>28) {
+} else if(temperature>18) {
 
   tempcolor = "text-yellow-500";
 
