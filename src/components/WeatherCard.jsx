@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+import WeatherBox from "./WeatherBox";
 
 const WeatherCard = ({data}) => {
 
@@ -8,6 +9,20 @@ const WeatherCard = ({data}) => {
 
 
   const temperature =data.main.temp;
+
+  const Sunrise = 1750980249;
+const Sunset = 1751028884;
+
+const SunriseTime = new Date(Sunrise*1000).toLocaleTimeString([],{
+  hour: "2-digit",
+  minute: "2-digit",
+  hour12: true,
+});
+const SunsetTime = new Date(Sunset*1000).toLocaleTimeString([],{
+  hour: "2-digit",
+  minute: "2-digit",
+  hour12: true,
+});
 
 
 let tempcolor= "text-green-800";
@@ -50,6 +65,11 @@ if(temperature>=38){
       <span className="text-gray-600">Feels Like:</span>
       <span className="font-medium">{data.main.feels_like}°C</span>
     </div>
+
+    <div className="flex justify-between">
+      <span className="text-gray-600"> Humidity</span>
+      <span className="font-medium">{data.main.humidity}%</span>
+    </div>
     
     <div className="flex justify-between">
       <span className="text-gray-600">High:</span>
@@ -61,6 +81,17 @@ if(temperature>=38){
       <span className="font-medium text-green-800">{data.main.temp_min}°C</span>
     </div>
 
+
+
+    <div className="flex justify-between">
+      <span className="text-gray-600"> Sunrise:</span>
+      <span className="font-medium">{SunriseTime}</span>
+    </div>
+
+    <div className="flex justify-between">
+      <span className="text-gray-600"> Sunset:</span>
+      <span className="font-medium">{SunsetTime}</span>
+    </div>
     
   </div>
 </div>
