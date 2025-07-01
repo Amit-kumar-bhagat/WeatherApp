@@ -6,8 +6,6 @@ const WeatherCard = ({data}) => {
 
 
   
-
-
 const temperature =data.main.temp;
 
   const Sunrise = 1750980249;
@@ -57,7 +55,7 @@ if(temperature>=38){
     </div>
     
        <div className="flex justify-center">
-      <span className="text-gray-600 text-[18px]">{data.weather[0].main}</span>
+      <span className="text-gray-600 text-[18px]">{data.weather[0].main}</span> 
       
     </div>
 
