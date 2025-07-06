@@ -10,6 +10,7 @@ It allows users to search any city and view real-time weather details like tempe
 - ⚛️ React (Vite)
 - 🎨 Tailwind CSS
 - 🌐 OpenWeatherMap API
+- 🌐 WORLD AIR QUALITY INDEX API
 
 ---
 

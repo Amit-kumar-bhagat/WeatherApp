@@ -5,16 +5,10 @@ import WeatherCard from "./components/WeatherCard";
 import WeatherBox from "./components/WeatherBox";
 
 function App() {
-
   return (
     <>
-   
-<WeatherBox/>
- 
-</>
-
-
+      <WeatherBox />
+    </>
   );
-
 }
 export default App;
