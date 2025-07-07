@@ -3,7 +3,12 @@ import { useState } from "react";
 import WeatherBox from "./WeatherBox";
 
 const WeatherCard = ({ data, dataAqi }) => {
-  
+  let aqiPresent = true;
+
+  if (dataAqi.data === "Unknown station") {
+    aqiPresent = false;
+  }
+
   const temperature = data.main.temp;
 
   const Sunrise = data.sys.sunrise;
@@ -28,7 +33,7 @@ const WeatherCard = ({ data, dataAqi }) => {
     tempcolor = "text-yellow-500";
   }
 
-  if (!data || !data.main || !data.weather || !dataAqi) return null;
+  if (!data || !data.main || !data.weather) return null;
 
   return (
     <div className="bg-gray-50 w-full max-w-md mx-auto mt-6 rounded-xl text-gray-800 p-6 shadow-sm border border-gray-200">
@@ -89,11 +94,12 @@ const WeatherCard = ({ data, dataAqi }) => {
           <span className="font-medium">{SunsetTime}</span>
         </div>
 
-        <div className="flex justify-between">
-          <span className="text-gray-600"> AQI:</span>
-          <span className="font-medium">{dataAqi.data.aqi}</span>
-        </div>
-        
+        {aqiPresent && (
+          <div className="flex justify-between">
+            <span className="text-gray-600"> AQI:</span>
+            <span className="font-medium">{dataAqi.data.aqi}</span>
+          </div>
+        )}
       </div>
     </div>
   );

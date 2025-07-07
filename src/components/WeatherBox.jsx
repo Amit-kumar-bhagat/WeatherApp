@@ -34,8 +34,12 @@ const WeatherBox = () => {
     const dataOfWeather = await responseOfWeather.json();
     const dataOfAQI = await responseOfAQI.json();
 
+    console.log(dataOfWeather);
+    console.log(dataOfAQI);
+    
+
   
-    if (responseOfWeather.ok && dataOfAQI.status === "ok") {
+    if (responseOfWeather.ok) {
       setWeather(dataOfWeather);
       setAqi(dataOfAQI);
       setError("");
