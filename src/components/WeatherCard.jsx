@@ -1,5 +1,4 @@
 import React from "react";
-import { useState } from "react";
 import WeatherBox from "./WeatherBox";
 
 const WeatherCard = ({data}) => {
