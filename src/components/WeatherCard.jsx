@@ -1,14 +1,14 @@
 import React from "react";
 import WeatherBox from "./WeatherBox";
 
-const WeatherCard = ({data}) => {
+const WeatherCard = ({data, dataAqi}) => {
 
 
   
 const temperature =data.main.temp;
 
-  const Sunrise = 1750980249;
-const Sunset = 1751028884;
+  const Sunrise = data.sys.sunrise;
+const Sunset = data.sys.sunset;
 
 const SunriseTime = new Date(Sunrise*1000).toLocaleTimeString([],{
   hour: "2-digit",
@@ -93,6 +93,11 @@ if(temperature>=38){
     <div className="flex justify-between">
       <span className="text-gray-600"> Sunset:</span>
       <span className="font-medium">{SunsetTime}</span>
+    </div>
+
+    <div className="flex justify-between">
+      <span className="text-gray-600"> AQI:</span>
+      <span className="font-medium">{dataAqi.data.aqi}</span>
     </div>
     
   </div>
