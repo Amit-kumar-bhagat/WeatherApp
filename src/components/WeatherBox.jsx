@@ -57,6 +57,11 @@ const WeatherBox = () => {
   };
 
   return (
+
+    <div className="min-h-screen">
+
+
+
     <div className="bg-slate-100 w-auto rounded-2xl mx-auto pl-4 pr-4 pb-8 pt-8 flex flex-col items-center shadow-md border border-gray-100">
       <div className="flex gap-2 ">
         <img src={WeatherIcon} alt="Weather-icon" className="" />
@@ -93,6 +98,8 @@ const WeatherBox = () => {
 
       {error && <p className="text-red-400 mt-4">{error}</p>}
       {weather && aqi && <WeatherCard data={weather} dataAqi={aqi} />}
+    </div>
+
     </div>
   );
 };

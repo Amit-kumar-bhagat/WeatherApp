@@ -7,19 +7,40 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-node_modules
+# Node modules
+node_modules/
+
+# Environment
 .env
-dist
-dist-ssr
 *.local
 
-# Editor directories and files
+# Build outputs
+dist/
+dist-ssr/
+build/
+.vite/
+
+# Android/Bubblewrap related
+android/
+.gradle/
+*.keystore
+build.gradle
+settings.gradle
+gradle.properties
+gradlew
+gradlew.bat
+twa-manifest.json
+app-release.aab
+*.apk
+
+# Editor & OS-specific files
 .vscode/*
 !.vscode/extensions.json
-.idea
+.idea/
 .DS_Store
 *.suo
 *.ntvs*
 *.njsproj
 *.sln
 *.sw?
+
